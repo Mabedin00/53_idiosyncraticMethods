@@ -12,8 +12,8 @@ public class Accumulator {
      */
     public static String catElementsStartingWith(
         List_inArraySlots list
-      , String prefix
-      ) {
+      , String prefix)
+      {
         String result = "";
 
         for( int el = 0; el < list.size(); el++){
@@ -92,10 +92,13 @@ public class Accumulator {
                objects to the following code that adds use of
                the operator to the code from Stumbling block 0:
              */
-                 // String store = (String) list.get(el);
-                 // if (store.startsWith(prefix))
-                 //     result += list.get(el);
-                 // }
+             
+            /*
+                 String store = (String) list.get(el);
+                 if (store.startsWith(prefix))
+                     result += list.get(el);
+                 }
+            /*
             /*
              predicted error message:
              types cannot be casted
@@ -111,6 +114,9 @@ public class Accumulator {
                A programmer can combine use of both operators
                to apply a method to exactly those
                elements in the list that support the method.
+               By checking a boolean to see if the method exists in
+               the object class, 
+               then and only then will it run the method
              */
 
             if (list.get(el) instanceof String){
@@ -134,9 +140,12 @@ public class Accumulator {
       ) {
          List_inArraySlots result = new List_inArraySlots();
          for( int el = 0; el < list.size(); el++){
+             // checks if it is a Double
              if (list.get(el) instanceof Double){
+                 // adds it to a variable to be checked
                 Double store = (Double) list.get(el);
-                if (!Double.isInfinite(store))
+                // checks said variable
+                if (Double.isFinite(store))
                     result.add(store);
             }
 

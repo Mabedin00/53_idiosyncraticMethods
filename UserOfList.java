@@ -40,7 +40,7 @@ public class UserOfList {
            + System.lineSeparator());
 
         // test ?? template
-        System.out.println( "test ??");
-        System.out.println( list + System.lineSeparator());
+        // System.out.println( "test ??");
+        // System.out.println( list + System.lineSeparator());
     }
 }
